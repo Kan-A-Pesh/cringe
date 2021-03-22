@@ -1,0 +1,9 @@
+.topbar{
+    height: 100px;
+    display: flex;
+}
+
+.topbar > h1{
+    margin: auto 0px auto 15px;
+    font-size: 3rem;
+}

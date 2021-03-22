@@ -1,0 +1,30 @@
+:root{
+    --light-blue: #3e78b2;
+    --blue: #1f62ad;
+    --dark-blue: #004ba8;
+    --back-blue: #254f81;
+    --light-grey: #4a525a;
+    --grey: #373d43;
+    --dark-grey: #24272b;
+    --light-black: #16171b;
+    --black: #07070a;
+    --white: #E0FBFC;
+    --white-blue: #C2DFE3;
+}
+
+*{
+    color: var(--white);
+    background: var(--dark-grey);
+}
+
+.bg-blue{
+    background: var(--light-blue);
+}
+
+.bg-light{
+    background: var(--grey);
+}
+
+.bg-dark{
+    background: var(--light-black);
+}
