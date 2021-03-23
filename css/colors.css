@@ -1,4 +1,5 @@
 :root{
+    --silver-blue: #9FBCD9;
     --light-blue: #3e78b2;
     --blue: #1f62ad;
     --dark-blue: #004ba8;
@@ -12,17 +13,25 @@
     --white-blue: #C2DFE3;
 }
 
+@font-face {
+    font-family: "Flors";
+    src: url("../fonts/GeosansLight.ttf");
+}
+
 *{
+    font-family: "Flors";
     color: var(--white);
     background: var(--dark-grey);
 }
 
 .bg-blue{
     background: var(--light-blue);
+    z-index: -200;
 }
 
 .bg-light{
     background: var(--grey);
+    z-index: -150;
 }
 
 .bg-dark{
