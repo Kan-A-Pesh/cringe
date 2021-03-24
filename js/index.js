@@ -13,9 +13,9 @@ window.addEventListener("load", function(){
         document.getElementById("titletext").classList.remove("visible");
         document.getElementById("desctext").classList.remove("visible");
         document.getElementById("scoretext").classList.remove("visible");
-        document.getElementById("titletext").innerText = "";
-        document.getElementById("desctext").innerText = "";
-        document.getElementById("scoretext").innerText = "";
+        document.getElementById("titletext").innerHTML = "";
+        document.getElementById("desctext").innerHTML = "";
+        document.getElementById("scoretext").innerHTML = "";
         document.getElementById("background").classList.remove("active");
         document.getElementById("result").classList.remove("active");
     };
@@ -39,9 +39,9 @@ function printText(result)
     desc = results[1];
     score = parseInt(results[0]);
 
-    document.getElementById("titletext").innerText = title;
+    document.getElementById("titletext").innerHTML = title;
     document.getElementById("titletext").classList.add("visible");
-    document.getElementById("desctext").innerText = desc;
+    document.getElementById("desctext").innerHTML = desc;
     document.getElementById("desctext").classList.add("visible");
     document.getElementById("scoretext").classList.add("visible");
     count(score);
@@ -49,7 +49,7 @@ function printText(result)
   
 async function count(count) {
     for (let i = -1; i < count+1; i++) {
-        document.getElementById("scoretext").innerText = i + "%";
+        document.getElementById("scoretext").innerHTML = i + "%";
         await new Promise(r => setTimeout(r, 2000/count));
     }
 }

@@ -149,11 +149,13 @@ html, body{
     width: 100%;
     text-align: center;
 }
+.result > .center *{
+    background:transparent;
+}
 .result > .center > h1{
     color: var(--white-blue);
     margin: 20px;
     font-size: 100px;
-    background:transparent;
     opacity: 0;
     transition: 2s;
 }
@@ -161,15 +163,16 @@ html, body{
     color: var(--light-blue);
     margin: 15px;
     font-size: 25px;
-    background:transparent;
     opacity: 0;
     transition: 1.5s;
+}
+.result > .center > h5 b{
+    color: var(--light-blue);
 }
 .result > .center > h3{
     color: var(--light-blue);
     margin: 15px;
     font-size: 150px;
-    background:transparent;
     opacity: 0;
     transition: 3s;
 }

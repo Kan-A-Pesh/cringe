@@ -41,21 +41,25 @@ if (str_contains($pseudo, "super"))
 {
     $score += 2;
     $desc = "Des <b>super</b>s encouragement pour ce <b>super</b> pseudo!";
+    $ps_super = true;
 }
 if (str_contains($pseudo, "mega"))
 {
     $score += 2;
     $desc = "Des <b>mega</b>s félicitations pour ce <b>mega</b> pseudo!";
+    $ps_mega = true;
 }
 if (str_contains($pseudo, "dragon"))
 {
     $score += 5;
     $desc = "Des dragons ... qui joue aux jeux vidéos?";
+    $ps_dragon = true;
 }
 if (str_contains($pseudo, "slayer"))
 {
     $score += 5;
     $desc = "Un slayer? Slayer de pseudos?";
+    $ps_slayer = true;
 }
 
 if (str_contains($pseudo, "gamer"))
@@ -122,7 +126,7 @@ if (str_contains($pseudo, "lon")){ $score += 1;}
 if (substr_count($pseudo, "_") > 5){ $score += 2;}
 if (substr_count($pseudo, "_") > 10){ $score += 3;}
 
-$score = $score * 2.5;
+$score = $score * 6;
 
 if ($score > 0){ $title = "Très peu ravagé!";}
 if ($score > 5){ $title = "Peu ravagé!";}
@@ -133,7 +137,8 @@ if ($score > 60){ $title = "C'est grave là!";}
 if ($score > 70){ $title = "Le ravageomètre est en sueur...";}
 if ($score > 80){ $title = "Le ravageomètre pleure là...";}
 if ($score > 90){ $title = "Le summum est atteind!";}
-if ($score == 100){
+if ($score >= 100){
+    $score = 100;
     $title = "Autant ravagé que Kan-A-Pesh";
     $desc = "Call an ambulance! Call an ambulance! but not for me...";
 }
