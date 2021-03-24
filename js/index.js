@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
         document.getElementById("input").value = "";
         document.getElementById("result").classList.add("active");
 
-        httpGetAsync("eror", printText);
+        httpGetAsync("http://suisjeravage.ml/api/cringeometer.php?pseudo="+text, printText);
     };
     document.getElementById("exitbtn").onclick = function(){
 

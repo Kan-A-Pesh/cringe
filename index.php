@@ -8,11 +8,11 @@
         <meta name="authors" content="Kan-à-Pesh, Shadooow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" type="text/css" href="css/colors.css">
-        <link rel="stylesheet" type="text/css" href="css/background.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/colors.css?_cO=<?php echo time();?>">
+        <link rel="stylesheet" type="text/css" href="css/background.css?_cO=<?php echo time();?>">
+        <link rel="stylesheet" type="text/css" href="css/index.css?_cO=<?php echo time();?>">
         
-        <script src="js/index.js"></script>
+        <script src="js/index.js?_cO=<?php echo time();?>"></script>
     </head>
     <body class="bg-blue">
         <div class="foreground">
