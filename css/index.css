@@ -1,6 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html, body{
@@ -11,10 +18,6 @@ html, body{
 .foreground{
     width: 100%;
     height: 100%;
-    max-height: 100%;
-    min-height: 100%;
-    min-width: 100%;
-    max-width: 100%;
     background: transparent;
     position: fixed;
     display: flex;
@@ -68,13 +71,18 @@ html, body{
     margin: 12.5px;
 }
 .btn > div{
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     z-index: 100;
     height: 100%;
     clip-path: polygon(5% 0%, 0% 0%, 0% 50%, 0% 100%, 5% 100%, 0% 50%);
     transition: 1s;
 }
-.btn:hover > div{
+.btn:hover > div:nth-of-type(1){
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+}
+.btn:active > div:nth-of-type(2){
     clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
 }
 .btn > div > div{
@@ -84,6 +92,87 @@ html, body{
     height: 100%;
     background: var(--back-blue);
 }
-.btn > div > div > h1{
+.btn > div:nth-of-type(2) > div{
+    background: var(--white);
+}
+.btn > div:nth-of-type(1) > div > h1{
     color: var(--white-blue);
+}
+.btn > div:nth-of-type(2) > div > h1{
+    color: var(--light-black);
+}
+
+.result{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: fixed;
+    top: 10%;
+    display: flex;
+    z-index: 1000;
+}
+
+.result.active{
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: 2s;
+}
+
+.result > #exitbtn{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    height: 75px;
+    width: 75px;
+    border-radius: 20%;
+    overflow: hidden;
+}
+.result > #exitbtn > *{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2500;
+}
+.result > #exitbtn > div{
+    z-index: 2750;
+    background: #FFF0;
+    transition: .3s;
+}
+.result > #exitbtn:hover > div{
+    background: #FFF5;
+}
+.result > .center {
+    width: 100%;
+    text-align: center;
+}
+.result > .center > h1{
+    color: var(--white-blue);
+    margin: 20px;
+    font-size: 100px;
+    background:transparent;
+    opacity: 0;
+    transition: 2s;
+}
+.result > .center > h5{
+    color: var(--light-blue);
+    margin: 15px;
+    font-size: 25px;
+    background:transparent;
+    opacity: 0;
+    transition: 1.5s;
+}
+.result > .center > h3{
+    color: var(--light-blue);
+    margin: 15px;
+    font-size: 150px;
+    background:transparent;
+    opacity: 0;
+    transition: 3s;
+}
+.visible{
+    opacity: 1!important;
 }

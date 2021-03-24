@@ -17,12 +17,17 @@
     <body class="bg-blue">
         <div class="foreground">
             <div class="center">
-                <input type="text">
-                <div class="btn">
+                <input type="text" id="input">
+                <div class="btn" id="button">
                     <h1>Suis-je ravagé?</h1>
                     <div>
                         <div>
                             <h1>Am I cringe?</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h1>Maybe ...</h1>
                         </div>
                     </div>
                 </div>
@@ -30,6 +35,7 @@
         </div>
         <div class="background">
             <div class="text">
+                <div></div>
                 <div></div>
             </div>
             <div class="left">
@@ -41,8 +47,19 @@
                 <div></div>
             </div>
         </div>
-        <div class="bg-light">
-            <div></div>
+        <div class="result" id="result">
+            <div id="exitbtn">
+                <div></div>
+                <img src="img/x.png">
+            </div>
+            <div class="center">
+                <h3 id="scoretext">0%</h3>
+                <h1 id="titletext">You're so ravagé!</h1>
+                <h5 id="desctext">But that's not grave you know</h5>
+            </div>
         </div>
+        <div class="bg-light bg-white"></div>
+        <div class="bg-light bg-grey"></div>
+        <div class="bg-light bg-black" id="background"></div>
     </body>
 </html>
