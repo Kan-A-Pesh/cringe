@@ -6,7 +6,7 @@ The cringe'o'meter is made for *you* 😍!
 
 ## Instructions 📜
 
-As simple as it sounds, it's just a cringe'o'meter, so you just need to go on the (official website 📃)[https://suisjeravage.ml/], enter you name and it will tell you if you're cringe or not.
+As simple as it sounds, it's just a cringe'o'meter, so you just need to go on the [official website 📃](https://suisjeravage.ml/), enter you name and it will tell you if you're cringe or not.
 
 ## Notes 📝
 
