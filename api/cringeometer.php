@@ -119,9 +119,26 @@ if (str_contains($pseudo, "pro"))
 }
 
 preg_match_all('!\d+!', $pseudo, $matches);
-if (str_contains($pseudo, "sha")){ $score += 2;}
-if (str_contains($pseudo, "kan")){ $score += 2;}
-if (str_contains($pseudo, "lon")){ $score += 1;}
+if (str_contains($pseudo, "sha")){ $score += 4;}
+if (str_contains($pseudo, "kan")){ $score += 4;}
+if (str_contains($pseudo, "lon")){ $score += 3;}
+if (str_contains($pseudo, "nin")){ $score += 5;}
+if (str_contains($pseudo, "pro")){ $score += 5;}
+if (str_contains($pseudo, "mas")){ $score += 4;}
+if (str_contains($pseudo, "ter")){ $score += 3;}
+if (str_contains($pseudo, "gas")){ $score += 2;}
+if (str_contains($pseudo, "plu")){ $score += 2;}
+if (str_contains($pseudo, "omg")){ $score += 3;}
+if (str_contains($pseudo, "x")){ $score += 1;}
+if (str_contains($pseudo, "sc")){ $score += 3;}
+if (str_contains($pseudo, "tad")){ $score += 5;}
+if (str_contains($pseudo, "et")){ $score += 3;}
+if (str_contains($pseudo, "car")){ $score += 2;}
+if (str_contains($pseudo, "bus")){ $score += 2;}
+if (str_contains($pseudo, "jok")){ $score += 3;}
+if (str_contains($pseudo, "blu")){ $score += 2;}
+if (str_contains($pseudo, "red")){ $score += 5;}
+if (str_contains($pseudo, "pur")){ $score += 10;}
 
 if (substr_count($pseudo, "_") > 5){ $score += 2;}
 if (substr_count($pseudo, "_") > 10){ $score += 3;}
@@ -138,9 +155,29 @@ if ($score > 70){ $title = "Le ravageomètre est en sueur...";}
 if ($score > 80){ $title = "Le ravageomètre pleure là...";}
 if ($score > 90){ $title = "Le summum est atteind!";}
 if ($score >= 100){
-    $score = 100;
-    $title = "Autant ravagé que Kan-A-Pesh";
-    $desc = "Call an ambulance! Call an ambulance! but not for me...";
+    $title = "Ravagé";
+    $desc = "Ravagé";
+}
+if ($score >= 200){
+    $title = "Ravagé Master";
+    $desc = "Un maitre!";
+}
+if ($score >= 250){
+    $title = "Ravagé King";
+    $desc = "Le roi des ravagés";
+}
+if ($score >= 300){
+    $title = "Ravagé God";
+    $desc = "À ça 🤏 d'être dans le leaderboard!";
+}
+if ($score >= 400){
+    $title = "✨ RAVAGAX ✨";
+    $desc = "Top 100 dans le leaderboard!";
+}
+if ($score >= 500){
+    $score = 500;
+    $title = "✨⭐ R A V A G A X ⭐✨";
+    $desc = "Top 1! Victoire Royale!";
 }
 
 echo($score."|".$desc."|".$title);
